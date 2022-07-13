@@ -1,0 +1,838 @@
+
+ DATA -> 1
+ DATA -> 1
+ DATA -> 1
+ DATA -> 1
+ DATA -> 1
+ DATA -> 1
+ DATA -> 1
+ DATA -> Whipped Cream
+ DATA -> Whipped Cream
+ DATA -> 
+ DATA -> Whipped Cream,Cinammon
+ DATA -> 
+ DATA -> Whipped Cream,Cinammon
+ products in json -> Whipped Cream,Cinammon
+ money given in json -> 19
+ products in json -> Whipped Cream,Cinammon
+ money given in json -> 19
+ array -> Array
+ products in json -> Whipped Cream,Cinammon
+ money given in json -> 19
+ array -> 1
+ products in json -> Whipped Cream,Cinammon
+ money given in json -> 19
+ array -> 1
+ products in json -> Whipped Cream,Cinammon
+ money given in json -> 19
+ array -> 1
+ products in json -> Whipped Cream,Cinammon
+ money given in json -> 19
+ array -> Whipped Cream,Cinammon
+ products in json -> Whipped Cream,Cinammon
+ money given in json -> 19
+ string -> Whipped Cream,Cinammon
+ array -> 1
+ products in json -> Whipped Cream,Cinammon
+ money given in json -> 19
+ string -> Whipped Cream,Cinammon
+ array -> Whipped Cream,Cinammon
+ products in json -> Whipped Cream,Cinammon
+ money given in json -> 19
+ string -> Whipped Cream,Cinammon
+ conta -> 2
+ products in json -> Whipped Cream,Cinammon
+ money given in json -> 19
+ string -> Array
+ nprod -> 2
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM `products` WHERE product_name ilike '\%Whipped Cream->product_name\%'
+ query-> 1 -> SELECT * FROM `products` WHERE product_name ilike '\%Cinammon->product_name\%'
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM `products` WHERE product_name ilike '%Whipped Cream->product_name%' 
+ query-> 1 -> SELECT * FROM `products` WHERE product_name ilike '%Cinammon->product_name%' 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name ilike '%Whipped Cream->product_name%' 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name ilike '%Whipped Cream->product_name%' 
+ query-> 1 -> SELECT * FROM products WHERE product_name ilike '%Cinammon->product_name%' 
+ data -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name ilike '%Whipped Cream->product_name%' 
+ query-> 1 -> SELECT * FROM products WHERE product_name ilike '%Cinammon->product_name%' 
+ data -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name ilike '%Whipped Cream->product_name%' 
+ query-> 1 -> SELECT * FROM products WHERE product_name ilike '%Cinammon->product_name%' 
+ data -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name ilike '%Whipped Cream->product_name%' 
+ query-> 1 -> SELECT * FROM products WHERE product_name ilike '%Cinammon->product_name%' 
+ data -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name ilike '%Whipped Cream%' 
+ query-> 1 -> SELECT * FROM products WHERE product_name ilike '%Cinammon%' 
+ data -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name ilike '%Whipped Cream%' 
+ query-> 1 -> SELECT * FROM products WHERE product_name ilike '%Cinammon%' 
+ data -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name ilike '%Whipped Cream%' 
+ query-> 1 -> SELECT * FROM products WHERE product_name ilike '%Cinammon%' 
+ data -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name ilike '%Whipped Cream%' 
+ query-> 1 -> SELECT * FROM products WHERE product_name ilike '%Cinammon%' 
+ data2 -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ data2 -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ data2 -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ data2 -> Array
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ data2 -> 1
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ data2 -> 1
+ data2 -> 1
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ data2 -> 1
+ data2 -> 1
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ data2 -> 1
+ data2 -> 1
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ data2 -> 1
+ data2 -> 1
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ smt -> object
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ smt -> 1
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ smt -> 1
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ smt -> 2
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ smt -> object
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> SELECT * FROM products WHERE product_name = 'Whipped Cream' 
+ query-> 1 -> SELECT * FROM products WHERE product_name = 'Cinammon' 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 0 -> S
+ query-> 1 -> E
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 2 -> L
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 2 -> L
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 2 -> L
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 2 -> L
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 2 -> L
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 2 -> L
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query-> 2 -> L
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; SELECT * FROM products WHERE product_name = 'Cinammon'; 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ smt -> object
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ smt -> 1
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ smt -> 1
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ query -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ smt -> SS
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ smt -> 1
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ smt -> 1
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ smt -> 
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ smt -> 1
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ smt -> array
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ smt -> Array
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ smt -> Array
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ query -> 
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ placeholders -> 
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ placeholders -> 
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ produto 0 -> Whipped Cream
+ produto 1 -> Cinammon
+ produto 2 -> Teste
+ placeholders -> 
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ sql -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+SELECT * FROM products WHERE product_name = 'Teste'; 
+
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ sql -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+SELECT * FROM products WHERE product_name = 'Teste'; 
+
+ products in json -> Whipped Cream&,Cinammon&,Teste
+ money given in json -> 19
+ sql1111 -> SELECT * FROM products WHERE product_name = 'Whipped Cream'; 
+SELECT * FROM products WHERE product_name = 'Cinammon'; 
+SELECT * FROM products WHERE product_name = 'Teste'; 
+
+ products in json -> Teste
+ money given in json -> 19
+ sql1111 -> DELETE * FROM products WHERE product_name = 'Teste'; 
+
+ products in json -> Teste
+ money given in json -> 19
+ sql1111 -> DELETE FROM products WHERE product_name = 'Teste'; 
+
+ products in json -> bebida de teste
+ money given in json -> 19
+ sql1111 -> DELETE FROM products WHERE product_name = 'bebida de teste'; 
+
+ products in json -> bebida de teste
+ money given in json -> 19
+ sql1111 -> DELETE FROM products WHERE product_name = 'bebida de teste'; 
+
+ products in json -> Syrup&,Cinnamon
+ money given in json -> 19
+ sql1111 -> DELETE FROM products WHERE product_name = 'Syrup'; 
+DELETE FROM products WHERE product_name = 'Cinnamon'; 
+
+ products in json -> Syrup&,Cinnamon
+ money given in json -> 19
+ sql1111 -> SELECT * FROM products WHERE product_name = 'Syrup'; 
+SELECT * FROM products WHERE product_name = 'Cinnamon'; 
+
+ products in json -> Syrup&,Cinnamon
+ money given in json -> 19
+ sql -> SELECT * FROM products WHERE product_name = 'Syrup'; 
+SELECT * FROM products WHERE product_name = 'Cinnamon'; 
+
+ products in json -> Syrup&,Cinnamon
+ money given in json -> 19
+ sql -> SELECT * FROM products WHERE product_name = 'Syrup'; 
+SELECT * FROM products WHERE product_name = 'Cinnamon'; 
+
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> SELECT * FROM products WHERE product_name = 'Yellow Sugar'; 
+SELECT * FROM products WHERE product_name = 'Cinnamon'; 
+
+ products in json -> Yellow Sugar
+ money given in json -> 19
+ sql -> SELECT * FROM products WHERE product_name = 'Yellow Sugar'; 
+
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> SELECT * FROM products WHERE product_name = 'Yellow Sugar'; 
+SELECT * FROM products WHERE product_name = 'Cinnamon'; 
+
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> SELECT * FROM products WHERE product_name = 'Yellow Sugar'; 
+SELECT * FROM products WHERE product_name = 'Cinnamon'; 
+
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ resultado -> 1
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ resultado -> 1
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ resultado -> array
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ resultado -> 
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ resultado -> Array
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ resultado -> Array
+ resultado -> Array
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ resultado -> 1
+ resultado -> 1
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ resultado -> 1
+ products in json -> Yellow Sugar&,Cinnamon
+ money given in json -> 19
+ sql -> 1
+ resultado -> 1
+ sql -> 1
+ resultado -> 1
+ sql -> 1
+ resultado -> 
+ resultado -> 
+ resultado -> 
+ resultado -> 
+ resultado -> 
+ resultado -> 
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado preço-> 1
+ resultado -> 1
+ resultado -> 1
+ resultado preço-> 1
+ resultado -> array
+ resultado preço-> 1
+ resultado -> array
+ resultado -> 
+ resultado preço-> 1
+ resultado -> 
+ resultado preço-> 1
+ resultado -> 1
+ resultado preço-> 1
+ resultado -> 1
+ resultado preço-> 1
+ resultado -> 1
+ resultado preço-> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> double
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ resultado -> 1
+ARGUMENTOS
+bebida de teste->1
+ order list -> 
+1
+ order list -> 
+1
+QUERY A SER CORRIDA select-> 1
+QUERY A SER CORRIDA -> 1
+ARGUMENTOS
+New Drink->1
+ Query Check -> 1
+ query2->1
+ query1->1
+ query2->1

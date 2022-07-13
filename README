@@ -1,0 +1,168 @@
+# 25fridaytbribeiro
+
+Name : Tiago Brandão Ribeiro
+E-mail: tbrandaoribeiro@gmail.com
+
+The components needed for this project:
+    php~v8.1
+    php-pgsql (if not available: $ sudo apt-get install php-pgsql)
+    Postman client to "emulate the frontend"
+    PostgreSQL hosted in ElephantSQL - Available from Internet
+ 
+To run the PHP Development server:
+    $ php -S IP:PORT
+inside the php* Folder
+
+###################
+#API Specification#
+###################
+This section contains the available options to test the code, way of invoking, return values
+
+Available options:
+    read.php -> Lists all informations about a specific product or all products
+        Invoking with http://http://172.18.1.219:6000/read.php
+        There are 2 options:
+            -> Checking all products - No JSON needs to be sent
+            -> Checking a specific product by name of ID
+                a JSON can be sent like so:
+                    {
+                        "product_id": 1
+                    }
+            Possible return values:
+                ->  (...)
+                    {
+                        "product_id": 24,
+                        "product_name": "Latte",
+                        "category": "Espresso Drinks",
+                        "price": "2.22",
+                        "available_stock": 32
+                    } (...)
+                    In case of successful reading from the database
+
+                -> The product_id you provided is not valid!
+                    In case of an invalid/non-existing provided product_id if the user wishes to see only one product
+
+############
+    delete.php  -> Deletes a single product from the database given the product_id
+        Invoking with http://http://172.18.1.219:6000/delete.php
+            Sending a JSON:
+                {
+                    "product_id": 1
+                }
+        
+        Possible return values:
+            ->Product deleted successfully
+                In case of successful deletion of product
+            ->Product not deleted. Something went wrong
+                In case of any error
+            ->The provided product_id is not valid. Please, provide an existing id
+                In case of invalid/non-existing provided product_id              
+    
+############
+    create.php  -> Create a single product given all needed information about it.
+        Invoking with http://http://172.18.1.219:6000/create.php
+            Sending a JSON with the following parameters
+                {
+                    "product_name": "Kinder Bueno Cookie",
+                    "category": "Extras",
+                    "price": 3.99,
+                    "available_stock": 50
+                }
+        The return is a JSON with a message containing the product id of the created product
+        
+        Possible return values:
+            ->Please fill all the required fields product_name, category, price, available_stock.
+                In case any of the fields was/were not declared
+            ->Empty field detected.
+                In case any of the fields was sent empty
+            ->Data Inserted Successfully with id '.$idProduct['product_id']
+                In case of successful insertion of product, returning its corresponding id.
+  
+############   
+    update.php -> Lets the user update a specific product providing new information. 
+    Mandatory to send: product_id
+        Invoking with http://http://172.18.1.219:6000/update.php
+        Sending a JSON with the following parameters
+            {
+                "product_id": "35",
+                "product_name": "Kinder Bueno Cookie",
+                "category": "Extras",
+                "price": 3.99,
+                "available_stock": 50
+            }
+    Possible return values:
+        ->It is mandatory to provide all details about the product, such as product_id, product_name, category, price, available_stock
+            In case the user does not know that all parameters
+        ->The product '.$data->product_name.' was updated successfully
+            Successful update of product
+
+
+
+############
+
+    shop.php
+    Invoking with http://http://172.18.1.219:6000/shop.php
+    Mandatory to send: 
+        product2Buy -> list of products the user wishes to buy,
+        moneyGiven -> The money that the client/user is handing to the cashier
+
+    Sending a JSON with the following parameters
+        {
+            "product2Buy": "Kinder Bueno Cookie&,Latte",
+            "moneyGiven": 35,
+        }
+    Note that "&," is being used as a separator for multiple products to be bought
+    
+    Possible return values:
+        ->Invalid Request Method. HTTP method should be POST
+            In case the user provides the wrong HTTP Method
+        ->You must provide a product or a list of products and money to pay for the products.
+            In case the user does not set any product OR money to buy
+        ->The item '.$productList[$i].' is not on our inventory
+            In case the user orders something not on the list
+        ->You do not have enough money to pay! You still owe us '.$moneyClientOwes
+            In case the user did not provide enough money
+        ->The total is '.$finalPrice.'\u20ac! You gave me '.$data->moneyGiven.'\u20ac, so the change will be '.$change.'\u20ac
+            In case of successful buy    
+
+########
+
+Useful Queries to populate the products table;
+
+Create the sequence for product_id
+    CREATE SEQUENCE product_id_sequence START 1;
+
+Create the products table
+    CREATE TABLE products
+        (product_id integer not null default nextval('product_id_sequence'),
+        name varchar(30),
+        category varchar(30),
+        price numeric(3,2),
+        available_stock integer check (available_stock>=0)
+    );
+
+Inserting first products
+    INSERT INTO products (name, category, price, available_stock) VALUES ('Latte', 'Espresso Drinks', '2.22', 50);
+    INSERT INTO products (name, category, price, available_stock) VALUES ('Mocha', 'Espresso Drinks', '4.15', 50);
+    INSERT INTO products (name, category, price, available_stock) VALUES ('Macchiato', 'Espresso Drinks', '3.99', 50);
+    INSERT INTO products (name, category, price, available_stock) VALUES ('Cappucino', 'Espresso Drinks', '3.55', 50);
+    INSERT INTO products (name, category, price, available_stock) VALUES ('Americano', 'Espresso Drinks', '2.26', 50);
+    INSERT INTO products (name, category, price, available_stock) VALUES ('Espresso', 'Espresso Drinks', '6.57', 50);
+
+    INSERT INTO products (name, category, price, available_stock) VALUES ('Filter Coffee', 'Brewed Coffee', '2.24', 50);
+    INSERT INTO products (name, category, price, available_stock) VALUES ('Caffe Misto', 'Brewed Coffee', '3.45', 50);
+
+    INSERT INTO products (name, category, price, available_stock) VALUES ('Mint', 'Tea', '3.02', 50);
+    INSERT INTO products (name, category, price, available_stock) VALUES ('Chamomile Herbal', 'Tea', '3.02', 50);
+    INSERT INTO products (name, category, price, available_stock) VALUES ('Earl Grey', 'Tea', '2.74', 50);
+
+    INSERT INTO products (name, category, price, available_stock) VALUES ('Cinnamon', 'Extras', '2.38', 50);
+    INSERT INTO products (name, category, price, available_stock) VALUES ('Yellow Sugar', 'Extras', '3.25', 50);
+    INSERT INTO products (name, category, price, available_stock) VALUES ('Syrup', 'Extras', '2.22', 50);
+    INSERT INTO products (name, category, price, available_stock) VALUES ('Whipped Cream', 'Extras', '4.51', 50);
+
+
+Useful links:
+https://www.w3jar.com/crud-rest-api-in-php-pdo/
+https://www.postgresql.org/docs/current/sql-createsequence.html
+https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-serial/
