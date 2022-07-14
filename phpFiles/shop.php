@@ -52,6 +52,7 @@ try {
         $checkInventoryStmt->execute();
         $data2[$i] = $checkInventoryStmt->fetch(PDO::FETCH_ASSOC); 
         if ($data2[$i] == "") {
+            //This will continue the buying process.
             echo json_encode([
                 'message' => 'The item '.$productList[$i].' is not on our inventory',
             ]);
@@ -64,37 +65,35 @@ try {
     // Any of the below solutions can be nested in the above For cycle.
     for ($i=0 ; $i<$numberOfProducts ; $i++) {
         //print_r($data2[$i]['available_stock']);
-        /* if ( ($data2[$i]['available_stock'] - 1 < 0 ) && ($data2[$i]['category'] == "Extras") ) {
-            //echo "cancelling order because of ".$data2[$i]['product_name'];
+        if ( ($data2[$i]['available_stock'] - 1 < 0 ) && ($data2[$i]['category'] == "Extras") ) {
+            //This will cancell the order (exit function)
             echo json_encode([
                 'success' => 0,
-                'message' => 'Cancelling the order because there is not enough -> \''.$data2[$i]['product_name'].'\' to fullfill the order',
+                'message' => 'Cancelling the order because there is not enough \''.$data2[$i]['product_name'].'\' to fulfill the order',
             ]);
-        }*/
-        
-        //or deleting the product from the order --- just another way of doing it 
-        if  (($data2[$i]['available_stock'])  == 0  ) {
-            unset($productList[$i]);
+            exit;
         }
+        
+        //or deleting the product from the order and continuing the order --- just another way of doing it 
+        /*if  (($data2[$i]['available_stock'])  == 0  ) {
+            unset($productList[$i]);
+        }*/
 
     }
 
     //re-indexing the values deleted from the second if clause
-    $productList = array_values($productList);
+    //this line is not needed since I opted to cancel the order
+    //$productList = array_values($productList);
     // end of re-indexing
-
-    unset ($i);
-    unset ($stmt);
-    unset ($data2);
 
 
     //This for cycle is only for calculating the final price of the order.
     //Accessing the price value and add it to the $finalPrice var.
     for ($i=0; $i<$numberOfProducts; $i++){
-        $sql[$i]= "SELECT * FROM products WHERE product_name = '$productList[$i]' AND available_stock > 0; \n" ;
-        $stmt = $conn->prepare($sql[$i]);
-        $stmt->execute();
-        $data2[$i] = $stmt->fetch(PDO::FETCH_ASSOC);
+        $checkSql[$i]= "SELECT * FROM products WHERE product_name = '$productList[$i]' AND available_stock > 0; \n" ;
+        $checkStmt = $conn->prepare($checkSql[$i]);
+        $checkStmt->execute();
+        $data2[$i] = $checkStmt->fetch(PDO::FETCH_ASSOC);
 
         $finalPrice = $finalPrice + floatval($data2[$i]['price']) ;
     }

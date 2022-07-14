@@ -29,22 +29,39 @@ if ( !isset($data->product_id) || !isset($data->product_name) || !isset($data->c
     ]);
 } else {
     try{
-        //check if product exists
-        $updateProductQuery = "UPDATE products SET product_name=:product_name, category=:category, price=:price, available_stock=:available_stock WHERE product_id=:product_id";
+        $checkProductQuery = "SELECT  * FROM products WHERE product_id=:product_id";
         
-        $updateStmt = $conn->prepare($updateProductQuery);
-        $updateStmt->bindValue(':product_id', $data->product_id, PDO::PARAM_INT);
-        $updateStmt->bindValue(':product_name', $data->product_name, PDO::PARAM_INT);
-        $updateStmt->bindValue(':category', $data->category, PDO::PARAM_INT);
-        $updateStmt->bindValue(':price', $data->price, PDO::PARAM_INT);
-        $updateStmt->bindValue(':available_stock', $data->available_stock, PDO::PARAM_INT);
-        $updateStmt->execute();
-        http_response_code(200);
-        echo json_encode([
-            'success' => 1,
-            'message' => 'The product '.$data->product_name.' was updated successfully'
-        ]);
+        $checkStmt = $conn->prepare($checkProductQuery);
+        $checkStmt->bindValue(':product_id', $data->product_id, PDO::PARAM_INT);
 
+        $checkStmt->execute();
+
+        if ($checkStmt->rowCount() > 0) {
+            
+            //update the product
+            $updateProductQuery = "UPDATE products SET product_name=:product_name, category=:category, price=:price, available_stock=:available_stock WHERE product_id=:product_id";
+                    
+            $updateStmt = $conn->prepare($updateProductQuery);
+            $updateStmt->bindValue(':product_id', $data->product_id, PDO::PARAM_INT);
+            $updateStmt->bindValue(':product_name', $data->product_name, PDO::PARAM_INT);
+            $updateStmt->bindValue(':category', $data->category, PDO::PARAM_INT);
+            $updateStmt->bindValue(':price', $data->price, PDO::PARAM_INT);
+            $updateStmt->bindValue(':available_stock', $data->available_stock, PDO::PARAM_INT);
+            $updateStmt->execute();
+            http_response_code(200);
+            echo json_encode([
+                'success' => 1,
+                'message' => 'The product '.$data->product_name.' was updated successfully'
+            ]);            
+        
+        } else{
+            //Wrong id was sent by client
+            http_response_code(406);
+            echo json_encode([
+                'success' => 0,
+                'message' => 'The product '.$data->product_name.' does not exist'
+            ]);
+        }
     } catch (PDOException $e) {
         http_response_code(500);
         echo json_encode([
