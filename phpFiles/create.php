@@ -1,11 +1,13 @@
 <?php
+
+//Setting up the HTTP Headers
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: access");
 header("Access-Control-Allow-Methods: POST");
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
-
+//Only allow POST Method
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') :
     http_response_code(405);
     echo json_encode([
@@ -16,20 +18,26 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') :
 endif;
 
 require 'Database.php';
+// Creating a object to connect to the database
 $database = new Database();
 $conn = $database->dbConnection();
 
+//Obtaining the input from the frontend
 $data = json_decode(file_get_contents("php://input"));
 
+//Verifications to see if user sent the parameters
 if (!isset($data->product_name) || !isset($data->category) || !isset($data->price) || !isset($data->available_stock)) {
-
+    //HTTP Response for not Acceptable
+    http_response_code(406);
     echo json_encode([
         'success' => 0,
         'message' => 'Please fill all the required fields product_name, category, price, available_stock.',
     ]);
 
+//Verification to see if not empty    
 } else if (empty(trim($data->product_name)) || empty(trim($data->category)) || empty(trim($data->price)) || empty(trim($data->available_stock))) {
-
+    //HTTP Response for not Acceptable
+    http_response_code(406);
     echo json_encode([
         'success' => 0,
         'message' => 'Empty field detected.',
@@ -45,20 +53,18 @@ try {
     $price = htmlspecialchars(trim($data->price));
     $available_stock = htmlspecialchars(trim($data->available_stock));
 
-    //INSERT INTO products (name, category, price, available_stock) VALUES ('Latte', 'Espresso Drinks', '2.22', 50);
-    //$queryToInsert = "INSERT INTO products (product_name, category, price, available_stock) VALUES ($name,:category,:price,:available_stock)";
     $queryToInsert = "INSERT INTO products (product_name, category, price, available_stock) VALUES (:productname,:category,:price,:available_stock) RETURNING product_id";
 
-    $stmt = $conn->prepare($queryToInsert);
-
-    $stmt->bindValue(':productname', $productName, PDO::PARAM_STR);
-    $stmt->bindValue(':category', $category, PDO::PARAM_STR);
-    $stmt->bindValue(':price', $price, PDO::PARAM_STR);
-    $stmt->bindValue(':available_stock', $available_stock, PDO::PARAM_STR);
+    $insertStmt = $conn->prepare($queryToInsert);
+    //Binding the parameters from $data to column values
+    $insertStmt->bindValue(':productname', $productName, PDO::PARAM_STR);
+    $insertStmt->bindValue(':category', $category, PDO::PARAM_STR);
+    $insertStmt->bindValue(':price', $price, PDO::PARAM_STR);
+    $insertStmt->bindValue(':available_stock', $available_stock, PDO::PARAM_STR);
     
-    if ($stmt->execute()) {
-        $idProduct = $stmt->fetch(PDO::FETCH_ASSOC);
-        
+    if ($insertStmt->execute()) {
+        $idProduct = $insertStmt->fetch(PDO::FETCH_ASSOC);
+        //HTTP Response for successful creation
         http_response_code(201);
         echo json_encode([
             'success' => 1,
@@ -66,7 +72,8 @@ try {
         ]);
         exit;
     }
-    http_response_code(404);
+    ////HTTP Response for successful creation
+    http_response_code(500);
     echo json_encode([
         'success' => 0,
         'message' => 'Data not Inserted.'

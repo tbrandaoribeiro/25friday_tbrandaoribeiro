@@ -18,11 +18,13 @@ require './Database.php';
 $database = new Database();
 $conn = $database->dbConnection();
 
+
+//Get data from the "frontend"
 $data = json_decode(file_get_contents("php://input"));
 
 
 if (!isset($data->product_id)) {
-    http_response_code(404);
+    http_response_code(406);
     echo json_encode([
         'success' => 0, 
         'message' => 'You must provide an id'
@@ -35,18 +37,18 @@ try {
     //First checking if the product_id is valid
     $checkQuery = "SELECT * FROM products WHERE product_id=:product_id";
     
-    $fetch_stmt = $conn->prepare($checkQuery);
-    $fetch_stmt->bindValue(':product_id', $data->product_id, PDO::PARAM_INT);
-    $fetch_stmt->execute();
+    $getStmt = $conn->prepare($checkQuery);
+    $getStmt->bindValue(':product_id', $data->product_id, PDO::PARAM_INT);
+    $getStmt->execute();
 
-    if ($fetch_stmt->rowCount() > 0) {
+    if ($getStmt->rowCount() > 0) {
 
         $deleteQuery = "DELETE FROM products WHERE product_id=:product_id";
         
-        $delete_product_stmt = $conn->prepare($deleteQuery);
-        $delete_product_stmt->bindValue(':product_id', $data->product_id,PDO::PARAM_INT);
+        $deleteProductStmt = $conn->prepare($deleteQuery);
+        $deleteProductStmt->bindValue(':product_id', $data->product_id,PDO::PARAM_INT);
 
-        if ($delete_product_stmt->execute()) {
+        if ($deleteProductStmt->execute()) {
             http_response_code(200);
             echo json_encode([
                 'success' => 1,
@@ -54,7 +56,8 @@ try {
             ]);
             exit;
         }
-        http_response_code(404);
+        //HTTP Response for some internal error
+        http_response_code(500);
         echo json_encode([
             'success' => 0,
             'message' => 'Product not deleted. Something went wrong.'
@@ -62,7 +65,8 @@ try {
         exit;
 
     } else {
-        http_response_code(404);
+        //HTTP Response for Not Acceptable
+        http_response_code(406);
         echo json_encode([
             'success' => 0,
             'message' => 'The provided product_id is not valid. Please, provide an existing id.'

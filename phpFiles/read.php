@@ -34,25 +34,28 @@ if (isset($data->product_id)) {
 
 
 try {
-    $stmt = $conn->prepare($getQuery);
-    $stmt->execute();
+    $getStmt = $conn->prepare($getQuery);
+    $getStmt->execute();
 
-    if ($stmt->rowCount() > 0) {
+    if ($getStmt->rowCount() > 0) {
         // https://stackoverflow.com/questions/55196852/what-is-the-difference-between-fetch-and-fetchall-in-pdo-query
         // Depending on the quey selected as $getQuery, the fetch is different
         $dbResponse = null;
         if (isset($data->product_id)) {
-            $dbResponse = $stmt->fetch(PDO::FETCH_ASSOC);
+            $dbResponse = $getStmt->fetch(PDO::FETCH_ASSOC);
         } else {
-            $dbResponse = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $dbResponse = $getStmt->fetchAll(PDO::FETCH_ASSOC);
         }
-
+        //HTTP Response for Get - OK 
+        http_response_code(200);
         echo json_encode([
             'success' => 1,
             'data' => $dbResponse,
         ]);
     }
     else {
+        //HTTP Response for not Acceptable
+        http_response_code(406);        
         echo json_encode([
             'success' => 0,
             'message' => 'The product_id you provided is not valid!',

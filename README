@@ -75,7 +75,7 @@ Available options:
                 In case any of the fields was/were not declared
             ->Empty field detected.
                 In case any of the fields was sent empty
-            ->Data Inserted Successfully with id '.$idProduct['product_id']
+            ->Data Inserted Successfully with id $idProduct['product_id']
                 In case of successful insertion of product, returning its corresponding id.
   
 ############   
@@ -93,7 +93,7 @@ Available options:
     Possible return values:
         ->It is mandatory to provide all details about the product, such as product_id, product_name, category, price, available_stock
             In case the user does not know that all parameters
-        ->The product '.$data->product_name.' was updated successfully
+        ->The product $data->product_name was updated successfully
             Successful update of product
 
 
@@ -118,11 +118,11 @@ Available options:
             In case the user provides the wrong HTTP Method
         ->You must provide a product or a list of products and money to pay for the products.
             In case the user does not set any product OR money to buy
-        ->The item '.$productList[$i].' is not on our inventory
+        ->The item $productList[$i] is not on our inventory
             In case the user orders something not on the list
-        ->You do not have enough money to pay! You still owe us '.$moneyClientOwes
+        ->You do not have enough money to pay! You still owe us $moneyClientOwes
             In case the user did not provide enough money
-        ->The total is '.$finalPrice.'\u20ac! You gave me '.$data->moneyGiven.'\u20ac, so the change will be '.$change.'\u20ac
+        ->The total is $finalPrice € ! You gave me $data->moneyGiven €, so the change will be .$change €
             In case of successful buy    
 
 ########
@@ -135,9 +135,9 @@ Create the sequence for product_id
 Create the products table
     CREATE TABLE products
         (product_id integer not null default nextval('product_id_sequence'),
-        name varchar(30),
+        product_name varchar(30),
         category varchar(30),
-        price numeric(3,2),
+        price decimal,
         available_stock integer check (available_stock>=0)
     );
 
@@ -162,7 +162,12 @@ Inserting first products
     INSERT INTO products (name, category, price, available_stock) VALUES ('Whipped Cream', 'Extras', '4.51', 50);
 
 
+To access the Database from command line:
+    psql -h manny.db.elephantsql.com -p 5432 -d xwouyqkk -U xwouyqkk
+    Password in Database.php file
+
 Useful links:
 https://www.w3jar.com/crud-rest-api-in-php-pdo/
 https://www.postgresql.org/docs/current/sql-createsequence.html
 https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-serial/
+https://www.postgresql.org/docs/current/datatype-numeric.html
