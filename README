@@ -8,6 +8,7 @@ The components needed for this project:
     php-pgsql (if not available: $ sudo apt-get install php-pgsql)
     Postman client to "emulate the frontend"
     PostgreSQL hosted in ElephantSQL - Available from Internet
+    Developed in Ubuntu 22.04
  
 To run the PHP Development server:
     $ php -S IP:PORT
