@@ -37,7 +37,7 @@ if ( !isset($data->product_id) || !isset($data->product_name) || !isset($data->c
         $checkStmt->execute();
 
         if ($checkStmt->rowCount() > 0) {
-            
+
             //update the product
             $updateProductQuery = "UPDATE products SET product_name=:product_name, category=:category, price=:price, available_stock=:available_stock WHERE product_id=:product_id";
                     
@@ -59,7 +59,7 @@ if ( !isset($data->product_id) || !isset($data->product_name) || !isset($data->c
             http_response_code(406);
             echo json_encode([
                 'success' => 0,
-                'message' => 'The product '.$data->product_name.' does not exist'
+                'message' => 'The product_id you sent does not exist'
             ]);
         }
     } catch (PDOException $e) {
