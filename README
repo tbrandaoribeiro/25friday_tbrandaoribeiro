@@ -20,7 +20,7 @@ This section contains the available options to test the code, way of invoking, r
 
 Available options:
     read.php -> Lists all informations about a specific product or all products
-        Invoking with http://http://172.18.1.219:6000/read.php
+        Invoking with http://http://phpServerIP:Port/read.php
         There are 2 options:
             -> Checking all products - No JSON needs to be sent
             -> Checking a specific product by name of ID
@@ -44,7 +44,7 @@ Available options:
 
 ############
     delete.php  -> Deletes a single product from the database given the product_id
-        Invoking with http://http://172.18.1.219:6000/delete.php
+        Invoking with http://http://phpServerIP:Port/delete.php
             Sending a JSON:
                 {
                     "product_id": 1
@@ -60,7 +60,7 @@ Available options:
     
 ############
     create.php  -> Create a single product given all needed information about it.
-        Invoking with http://http://172.18.1.219:6000/create.php
+        Invoking with http://http://phpServerIP:Port/create.php
             Sending a JSON with the following parameters
                 {
                     "product_name": "Kinder Bueno Cookie",
@@ -81,7 +81,7 @@ Available options:
 ############   
     update.php -> Lets the user update a specific product providing new information. 
     Mandatory to send: product_id
-        Invoking with http://http://172.18.1.219:6000/update.php
+        Invoking with http://http://phpServerIP:Port/update.php
         Sending a JSON with the following parameters
             {
                 "product_id": "35",
@@ -101,7 +101,7 @@ Available options:
 ############
 
     shop.php
-    Invoking with http://http://172.18.1.219:6000/shop.php
+    Invoking with http://http://phpServerIP:Port/shop.php
     Mandatory to send: 
         product2Buy -> list of products the user wishes to buy,
         moneyGiven -> The money that the client/user is handing to the cashier
@@ -142,24 +142,24 @@ Create the products table
     );
 
 Inserting first products
-    INSERT INTO products (name, category, price, available_stock) VALUES ('Latte', 'Espresso Drinks', '2.22', 50);
-    INSERT INTO products (name, category, price, available_stock) VALUES ('Mocha', 'Espresso Drinks', '4.15', 50);
-    INSERT INTO products (name, category, price, available_stock) VALUES ('Macchiato', 'Espresso Drinks', '3.99', 50);
-    INSERT INTO products (name, category, price, available_stock) VALUES ('Cappucino', 'Espresso Drinks', '3.55', 50);
-    INSERT INTO products (name, category, price, available_stock) VALUES ('Americano', 'Espresso Drinks', '2.26', 50);
-    INSERT INTO products (name, category, price, available_stock) VALUES ('Espresso', 'Espresso Drinks', '6.57', 50);
+    INSERT INTO products (product_name, category, price, available_stock) VALUES ('Latte', 'Espresso Drinks', '2.22', 50);
+    INSERT INTO products (product_name, category, price, available_stock) VALUES ('Mocha', 'Espresso Drinks', '4.15', 50);
+    INSERT INTO products (product_name, category, price, available_stock) VALUES ('Macchiato', 'Espresso Drinks', '3.99', 50);
+    INSERT INTO products (product_name, category, price, available_stock) VALUES ('Cappucino', 'Espresso Drinks', '3.55', 50);
+    INSERT INTO products (product_name, category, price, available_stock) VALUES ('Americano', 'Espresso Drinks', '2.26', 50);
+    INSERT INTO products (product_name, category, price, available_stock) VALUES ('Espresso', 'Espresso Drinks', '6.57', 50);
 
-    INSERT INTO products (name, category, price, available_stock) VALUES ('Filter Coffee', 'Brewed Coffee', '2.24', 50);
-    INSERT INTO products (name, category, price, available_stock) VALUES ('Caffe Misto', 'Brewed Coffee', '3.45', 50);
+    INSERT INTO products (product_name, category, price, available_stock) VALUES ('Filter Coffee', 'Brewed Coffee', '2.24', 50);
+    INSERT INTO products (product_name, category, price, available_stock) VALUES ('Caffe Misto', 'Brewed Coffee', '3.45', 50);
 
-    INSERT INTO products (name, category, price, available_stock) VALUES ('Mint', 'Tea', '3.02', 50);
-    INSERT INTO products (name, category, price, available_stock) VALUES ('Chamomile Herbal', 'Tea', '3.02', 50);
-    INSERT INTO products (name, category, price, available_stock) VALUES ('Earl Grey', 'Tea', '2.74', 50);
+    INSERT INTO products (product_name, category, price, available_stock) VALUES ('Mint', 'Tea', '3.02', 50);
+    INSERT INTO products (product_name, category, price, available_stock) VALUES ('Chamomile Herbal', 'Tea', '3.02', 50);
+    INSERT INTO products (product_name, category, price, available_stock) VALUES ('Earl Grey', 'Tea', '2.74', 50);
 
-    INSERT INTO products (name, category, price, available_stock) VALUES ('Cinnamon', 'Extras', '2.38', 50);
-    INSERT INTO products (name, category, price, available_stock) VALUES ('Yellow Sugar', 'Extras', '3.25', 50);
-    INSERT INTO products (name, category, price, available_stock) VALUES ('Syrup', 'Extras', '2.22', 50);
-    INSERT INTO products (name, category, price, available_stock) VALUES ('Whipped Cream', 'Extras', '4.51', 50);
+    INSERT INTO products (product_name, category, price, available_stock) VALUES ('Cinnamon', 'Extras', '2.38', 50);
+    INSERT INTO products (product_name, category, price, available_stock) VALUES ('Yellow Sugar', 'Extras', '3.25', 50);
+    INSERT INTO products (product_name, category, price, available_stock) VALUES ('Syrup', 'Extras', '2.22', 50);
+    INSERT INTO products (product_name, category, price, available_stock) VALUES ('Whipped Cream', 'Extras', '4.51', 50);
 
 
 To access the Database from command line:
@@ -171,3 +171,4 @@ https://www.w3jar.com/crud-rest-api-in-php-pdo/
 https://www.postgresql.org/docs/current/sql-createsequence.html
 https://www.postgresqltutorial.com/postgresql-tutorial/postgresql-serial/
 https://www.postgresql.org/docs/current/datatype-numeric.html
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
