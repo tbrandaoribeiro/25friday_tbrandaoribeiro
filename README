@@ -95,7 +95,8 @@ Available options:
             In case the user does not know that all parameters
         ->The product $data->product_name was updated successfully
             Successful update of product
-
+        ->The product_id you sent does not exist
+            In case the client sends a non-existing product_id
 
 
 ############
